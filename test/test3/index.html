@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Data Widget</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <select id="exchange-selector">
+                <option value="0">SGX</option>
+                <option value="2">Bursa</option>
+                <option value="3">Nasdaq</option>
+            </select>
+            <button id="theme-toggle">Switch to Dark Theme</button>
+        </header>
+        <div class="tabs">
+            <button data-view="0" class="tab-button active">Top Volume</button>
+            <button data-view="1" class="tab-button">Top Gainers</button>
+            <button data-view="2" class="tab-button">Top Losers</button>
+        </div>
+        <table id="stock-table">
+            <thead>
+                <tr>
+                    <th>Stock</th>
+                    <th>Code</th>
+                    <th>Last</th>
+                    <th>Vol</th>
+                    <th>Buy</th>
+                    <th>Buy Vol</th>
+                    <th>Sell</th>
+                    <th>Sell Vol</th>
+                    <th>+/-</th>
+                    <th>%chg</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
